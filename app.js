@@ -8,7 +8,7 @@
    ADMIN PASSCODE
 ========================= */
 
-const ADMIN_PASSCODE = "123456";
+const ADMIN_PASSCODE = "552186";
 
 
 /* =========================
