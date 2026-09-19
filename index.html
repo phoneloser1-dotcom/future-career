@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Future Career</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- NAME PAGE -->
+    <section class="page active" id="namePage">
+        <div class="emoji">🚀</div>
+
+        <h1>My Future Career</h1>
+
+        <p class="subtitle">
+            Let's see what our class wants to become!
+        </p>
+
+        <div class="card">
+            <label for="nameInput">What's your name?</label>
+
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="Enter your name"
+                maxlength="30"
+            >
+
+            <button class="main-btn" id="continueBtn">
+                Continue →
+            </button>
+
+            <p class="error" id="nameError"></p>
+        </div>
+    </section>
+
+
+    <!-- CAREER PAGE -->
+    <section class="page" id="careerPage">
+
+        <div class="top-bar">
+            <button class="back-btn" id="backBtn">← Back</button>
+        </div>
+
+        <h1>Choose Your Career</h1>
+
+        <p class="subtitle">
+            Hi, <strong id="studentName"></strong>!
+            What do you want to become?
+        </p>
+
+        <div class="career-grid">
+
+            <button class="career" data-career="Doctor">
+                <span>👨‍⚕️</span>
+                Doctor
+            </button>
+
+            <button class="career" data-career="Engineer">
+                <span>👷</span>
+                Engineer
+            </button>
+
+            <button class="career" data-career="Software Engineer">
+                <span>💻</span>
+                Software Engineer
+            </button>
+
+            <button class="career" data-career="Pilot">
+                <span>✈️</span>
+                Pilot
+            </button>
+
+            <button class="career" data-career="Teacher">
+                <span>👨‍🏫</span>
+                Teacher
+            </button>
+
+            <button class="career" data-career="Lawyer">
+                <span>⚖️</span>
+                Lawyer
+            </button>
+
+            <button class="career" data-career="Scientist">
+                <span>🔬</span>
+                Scientist
+            </button>
+
+            <button class="career" data-career="Designer">
+                <span>🎨</span>
+                Designer
+            </button>
+
+            <button class="career" data-career="Chef">
+                <span>👨‍🍳</span>
+                Chef
+            </button>
+
+            <button class="career" data-career="Business Owner">
+                <span>💼</span>
+                Business Owner
+            </button>
+
+            <button class="career" data-career="Architect">
+                <span>🏗️</span>
+                Architect
+            </button>
+
+            <button class="career" data-career="Game Developer">
+                <span>🎮</span>
+                Game Developer
+            </button>
+
+            <button class="career" data-career="Other">
+                <span>✨</span>
+                Other
+            </button>
+
+        </div>
+
+        <div class="other-box hidden" id="otherBox">
+            <label for="otherInput">What career do you want?</label>
+
+            <input
+                type="text"
+                id="otherInput"
+                placeholder="Enter your career"
+                maxlength="40"
+            >
+        </div>
+
+        <button class="main-btn submit-btn" id="submitBtn">
+            Submit My Choice ✓
+        </button>
+
+        <p class="error" id="careerError"></p>
+
+    </section>
+
+
+    <!-- SUCCESS PAGE -->
+    <section class="page" id="successPage">
+
+        <div class="success-icon">🎉</div>
+
+        <h1>Choice Submitted!</h1>
+
+        <p class="subtitle">
+            Thank you, <strong id="successName"></strong>!
+        </p>
+
+        <div class="chosen-career">
+            <p>Your future career:</p>
+            <h2 id="successCareer"></h2>
+        </div>
+
+        <p class="small-text">
+            You can now close this page.
+        </p>
+
+    </section>
+
+
+    <!-- ADMIN LOGIN -->
+    <section class="page" id="adminLoginPage">
+
+        <div class="emoji">🔐</div>
+
+        <h1>Admin Login</h1>
+
+        <p class="subtitle">
+            Enter the admin passcode to view the results.
+        </p>
+
+        <div class="card">
+
+            <label for="adminPasscode">Passcode</label>
+
+            <input
+                type="password"
+                id="adminPasscode"
+                placeholder="Enter passcode"
+            >
+
+            <button class="main-btn" id="loginBtn">
+                Login
+            </button>
+
+            <p class="error" id="loginError"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULTS -->
+    <section class="page" id="resultsPage">
+
+        <div class="top-bar">
+            <button class="back-btn" id="logoutBtn">
+                ← Logout
+            </button>
+        </div>
+
+        <h1>📊 Career Results</h1>
+
+        <p class="subtitle">
+            Class career choices
+        </p>
+
+        <div class="total-box">
+            <span>Total Responses</span>
+            <strong id="totalResponses">0</strong>
+        </div>
+
+        <h2>Career Summary</h2>
+
+        <div class="summary" id="summary"></div>
+
+        <h2>Students</h2>
+
+        <div class="student-results" id="studentResults"></div>
+
+        <button class="secondary-btn" id="refreshBtn">
+            🔄 Refresh Results
+        </button>
+
+        <button class="secondary-btn clear-btn" id="clearBtn">
+            🗑️ Clear Test Results
+        </button>
+
+    </section>
+
+</div>
+
+
+<!-- ADMIN BUTTON -->
+<button class="admin-access" id="adminAccessBtn">
+    Admin
+</button>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
